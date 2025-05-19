@@ -1,0 +1,44 @@
+{
+  "counts": [
+    {
+      "id": 2,
+      "name": "Комната Б",
+      "student_count": 1
+    },
+    {
+      "id": 1,
+      "name": "Комната А",
+      "student_count": 2
+    }
+  ],
+  "lowest_avg_age": [
+    {
+      "id": 2,
+      "name": "Комната Б",
+      "avg_age": "24.0000000000000000"
+    },
+    {
+      "id": 1,
+      "name": "Комната А",
+      "avg_age": "25.0000000000000000"
+    }
+  ],
+  "max_age_diff": [
+    {
+      "id": 1,
+      "name": "Комната А",
+      "age_diff_days": 202
+    },
+    {
+      "id": 2,
+      "name": "Комната Б",
+      "age_diff_days": 0
+    }
+  ],
+  "mixed_gender": [
+    {
+      "id": 1,
+      "name": "Комната А"
+    }
+  ]
+}

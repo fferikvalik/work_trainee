@@ -1,0 +1,6 @@
+[
+    { "id": 1, "name": "Alice",   "birth_date": "2000-05-01", "gender": "F", "room_id": 1 },
+    { "id": 2, "name": "Bob",     "birth_date": "1999-10-12", "gender": "M", "room_id": 1 },
+    { "id": 3, "name": "Charlie", "birth_date": "2001-02-20", "gender": "M", "room_id": 2 }
+  ]
+  

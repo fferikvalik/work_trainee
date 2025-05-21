@@ -1,0 +1,735 @@
+macbookpro@MacBook-Pro-Valentin pagila % psql -U postgres -d pagila -f pagila-queries/only1.sql
+ category_name | number_of_films 
+---------------+-----------------
+ Music         |             152
+ Drama         |             152
+ Travel        |             151
+ Games         |             150
+ Children      |             150
+ Foreign       |             150
+ Sci-Fi        |             149
+ Action        |             149
+ Animation     |             148
+ Classics      |             147
+ New           |             147
+ Family        |             147
+ Sports        |             145
+ Documentary   |             145
+ Comedy        |             143
+ Horror        |             142
+(16 rows)
+
+macbookpro@MacBook-Pro-Valentin pagila % psql -U postgres -d pagila -f pagila-queries/only2.sql
+     actor_name     | total_rentals 
+--------------------+---------------
+ GINA DEGENERES     |           753
+ MATTHEW CARREY     |           678
+ MARY KEITEL        |           674
+ ANGELA WITHERSPOON |           654
+ WALTER TORN        |           640
+ HENRY BERRY        |           612
+ JAYNE NOLTE        |           611
+ VAL BOLGER         |           605
+ SANDRA KILMER      |           604
+ SEAN GUINESS       |           599
+(10 rows)
+
+macbookpro@MacBook-Pro-Valentin pagila % psql -U postgres -d pagila -f pagila-queries/only3.sql
+ category_name | total_revenue 
+---------------+---------------
+ Foreign       |      10507.67
+(1 row)
+
+macbookpro@MacBook-Pro-Valentin pagila % psql -U postgres -d pagila -f pagila-queries/only4.sql
+         title          
+------------------------
+ SKY MIRACLE
+ KILL BROTHERHOOD
+ SISTER FREDDY
+ GLADIATOR WESTWARD
+ FLOATS GARDEN
+ APOLLO TEEN
+ CRYSTAL BREAKING
+ HOCUS FRIDA
+ FRANKENSTEIN STRANGER
+ RAIDERS ANTITRUST
+ HATE HANDICAP
+ ORDER BETRAYED
+ WAKE JAWS
+ DELIVERANCE MULHOLLAND
+ BUTCH PANTHER
+ PSYCHO SHRUNK
+ CATCH AMISTAD
+ ARK RIDGEMONT
+ CROWDS TELEMARK
+ FIREHOUSE VIETNAM
+ PEARL DESTINY
+ VOLUME HOUSE
+ GUMP DATE
+ ROOF CHAMPION
+ WALLS ARTIST
+ CROSSING DIVORCE
+ MUPPET MILE
+ ARSENIC INDEPENDENCE
+ RAINBOW SHOCK
+ COMMANDMENTS EXPRESS
+ CHOCOLATE DUCK
+ ARGONAUTS TOWN
+ SUICIDES SILENCE
+ KENTUCKIAN GIANT
+ PERDITION FARGO
+ TREASURE COMMAND
+ BOONDOCK BALLROOM
+ ALICE FANTASIA
+ VILLAIN DESPERATE
+ TADPOLE PARK
+ DAZED PUNK
+ CHINATOWN GLADIATOR
+(42 rows)
+
+macbookpro@MacBook-Pro-Valentin pagila % psql -U postgres -d pagila -f pagila-queries/only5.sql
+ first_name | last_name | film_count 
+------------+-----------+------------
+ SIDNEY     | CROWE     |          9
+ RICHARD    | PENN      |          9
+ EWAN       | GOODING   |          9
+(3 rows)
+
+macbookpro@MacBook-Pro-Valentin pagila % psql -U postgres -d pagila -f pagila-queries/only6.sql
+         city_name          | active_customers | inactive_customers 
+----------------------------+------------------+--------------------
+ Najafabad                  |                0 |                  1
+ Uluberia                   |                0 |                  1
+ Coatzacoalcos              |                0 |                  1
+ Daxian                     |                0 |                  1
+ Ktahya                     |                0 |                  1
+ Kamyin                     |                0 |                  1
+ Szkesfehrvr                |                0 |                  1
+ Xiangfan                   |                0 |                  1
+ Amroha                     |                0 |                  1
+ Wroclaw                    |                0 |                  1
+ Kumbakonam                 |                0 |                  1
+ Bat Yam                    |                0 |                  1
+ Pingxiang                  |                0 |                  1
+ Charlotte Amalie           |                0 |                  1
+ Southend-on-Sea            |                0 |                  1
+ Gandhinagar                |                1 |                  0
+ Livorno                    |                1 |                  0
+ Lancaster                  |                1 |                  0
+ Surakarta                  |                1 |                  0
+ Ambattur                   |                1 |                  0
+ Kisumu                     |                1 |                  0
+ Elista                     |                1 |                  0
+ Pune                       |                1 |                  0
+ Uruapan                    |                1 |                  0
+ Shivapuri                  |                1 |                  0
+ Tarsus                     |                1 |                  0
+ Kuching                    |                1 |                  0
+ Oyo                        |                1 |                  0
+ Funafuti                   |                1 |                  0
+ Kingstown                  |                1 |                  0
+ Kanchrapara                |                1 |                  0
+ Suihua                     |                1 |                  0
+ Aurora                     |                2 |                  0
+ Guaruj                     |                1 |                  0
+ Escobar                    |                1 |                  0
+ Cianjur                    |                1 |                  0
+ Cheju                      |                1 |                  0
+ Atlixco                    |                1 |                  0
+ Kamarhati                  |                1 |                  0
+ Avellaneda                 |                1 |                  0
+ Yinchuan                   |                1 |                  0
+ Citrus Heights             |                1 |                  0
+ Sagamihara                 |                1 |                  0
+ Greensboro                 |                1 |                  0
+ Myingyan                   |                1 |                  0
+ Allende                    |                1 |                  0
+ Erlangen                   |                1 |                  0
+ Sumy                       |                1 |                  0
+ Sunnyvale                  |                1 |                  0
+ Jinzhou                    |                1 |                  0
+ Naju                       |                1 |                  0
+ Matsue                     |                1 |                  0
+ Zhoushan                   |                1 |                  0
+ Kilis                      |                1 |                  0
+ Lubumbashi                 |                1 |                  0
+ Nha Trang                  |                1 |                  0
+ Linz                       |                1 |                  0
+ Brescia                    |                1 |                  0
+ Banjul                     |                1 |                  0
+ Apeldoorn                  |                1 |                  0
+ Lima                       |                1 |                  0
+ Acua                       |                1 |                  0
+ Gijn                       |                1 |                  0
+ Buenaventura               |                1 |                  0
+ Serpuhov                   |                1 |                  0
+ Hanoi                      |                1 |                  0
+ Akishima                   |                1 |                  0
+ Ashgabat                   |                1 |                  0
+ Addis Abeba                |                1 |                  0
+ Chandrapur                 |                1 |                  0
+ Salinas                    |                1 |                  0
+ Botosani                   |                1 |                  0
+ Ilorin                     |                1 |                  0
+ Patiala                    |                1 |                  0
+ Iligan                     |                1 |                  0
+ Jining                     |                1 |                  0
+ Fuzhou                     |                1 |                  0
+ NDjamna                    |                1 |                  0
+ Zaria                      |                1 |                  0
+ Kurgan                     |                1 |                  0
+ Balikesir                  |                1 |                  0
+ Belm                       |                1 |                  0
+ Jaipur                     |                1 |                  0
+ Molodetno                  |                1 |                  0
+ Tanauan                    |                1 |                  0
+ al-Hawiya                  |                1 |                  0
+ Ozamis                     |                1 |                  0
+ Santa Rosa                 |                1 |                  0
+ Sogamoso                   |                1 |                  0
+ Portoviejo                 |                1 |                  0
+ Abha                       |                1 |                  0
+ Novi Sad                   |                1 |                  0
+ Jos Azueta                 |                1 |                  0
+ Bhimavaram                 |                1 |                  0
+ Crdoba                     |                1 |                  0
+ Tokat                      |                1 |                  0
+ Ezhou                      |                1 |                  0
+ Mosul                      |                1 |                  0
+ Zapopan                    |                1 |                  0
+ Denizli                    |                1 |                  0
+ Effon-Alaiye               |                1 |                  0
+ Po                         |                1 |                  0
+ Tete                       |                1 |                  0
+ Rancagua                   |                1 |                  0
+ Nagareyama                 |                1 |                  0
+ Inegl                      |                1 |                  0
+ Ondo                       |                1 |                  0
+ Athenai                    |                1 |                  0
+ Nam Dinh                   |                1 |                  0
+ Zeleznogorsk               |                1 |                  0
+ Haining                    |                1 |                  0
+ Etawah                     |                1 |                  0
+ Tuguegarao                 |                1 |                  0
+ San Lorenzo                |                1 |                  0
+ Ife                        |                1 |                  0
+ Graz                       |                1 |                  0
+ Baiyin                     |                1 |                  0
+ Sucre                      |                1 |                  0
+ Garden Grove               |                1 |                  0
+ Gingoog                    |                1 |                  0
+ Trshavn                    |                1 |                  0
+ Allappuzha (Alleppey)      |                1 |                  0
+ Tarlac                     |                1 |                  0
+ Chapra                     |                1 |                  0
+ Dongying                   |                1 |                  0
+ Antofagasta                |                1 |                  0
+ Dhaka                      |                1 |                  0
+ Valle de Santiago          |                1 |                  0
+ Usak                       |                1 |                  0
+ Southport                  |                1 |                  0
+ Batman                     |                1 |                  0
+ Iwatsuki                   |                1 |                  0
+ So Bernardo do Campo       |                1 |                  0
+ Lapu-Lapu                  |                1 |                  0
+ Izumisano                  |                1 |                  0
+ Sirjan                     |                1 |                  0
+ Uttarpara-Kotrung          |                1 |                  0
+ Lilongwe                   |                1 |                  0
+ Bamenda                    |                1 |                  0
+ Onomichi                   |                1 |                  0
+ s-Hertogenbosch            |                1 |                  0
+ Kamjanets-Podilskyi        |                1 |                  0
+ Monclova                   |                1 |                  0
+ Olomouc                    |                1 |                  0
+ Skikda                     |                1 |                  0
+ San Felipe de Puerto Plata |                1 |                  0
+ Pereira                    |                1 |                  0
+ Boa Vista                  |                1 |                  0
+ Florencia                  |                1 |                  0
+ Hagonoy                    |                1 |                  0
+ Koriyama                   |                1 |                  0
+ Tabora                     |                1 |                  0
+ Cape Coral                 |                1 |                  0
+ Shimoga                    |                1 |                  0
+ Benin City                 |                1 |                  0
+ Omdurman                   |                1 |                  0
+ Maikop                     |                1 |                  0
+ Okara                      |                1 |                  0
+ Chisinau                   |                1 |                  0
+ Probolinggo                |                1 |                  0
+ Bydgoszcz                  |                1 |                  0
+ Changhwa                   |                1 |                  0
+ Pjatigorsk                 |                1 |                  0
+ Batna                      |                1 |                  0
+ York                       |                1 |                  0
+ Coquimbo                   |                1 |                  0
+ Urawa                      |                1 |                  0
+ Tambaram                   |                1 |                  0
+ Vicente Lpez               |                1 |                  0
+ Masqat                     |                1 |                  0
+ Akron                      |                1 |                  0
+ Bag                        |                1 |                  0
+ Witten                     |                1 |                  0
+ Patras                     |                1 |                  0
+ El Alto                    |                1 |                  0
+ Sungai Petani              |                1 |                  0
+ Kowloon and New Kowloon    |                1 |                  0
+ Hunuco                     |                1 |                  0
+ Ahmadnagar                 |                1 |                  0
+ Purwakarta                 |                1 |                  0
+ Toulon                     |                1 |                  0
+ Vancouver                  |                1 |                  0
+ Udine                      |                1 |                  0
+ Varanasi (Benares)         |                1 |                  0
+ Tegal                      |                1 |                  0
+ Santa F                    |                1 |                  0
+ Boksburg                   |                1 |                  0
+ Zalantun                   |                1 |                  0
+ Bucuresti                  |                1 |                  0
+ Uijongbu                   |                1 |                  0
+ Talavera                   |                1 |                  0
+ Fukuyama                   |                1 |                  0
+ Liaocheng                  |                1 |                  0
+ Plock                      |                1 |                  0
+ Araatuba                   |                1 |                  0
+ Alvorada                   |                1 |                  0
+ La Paz                     |                1 |                  0
+ Tama                       |                1 |                  0
+ Abu Dhabi                  |                1 |                  0
+ Mandi Bahauddin            |                1 |                  0
+ Junan                      |                1 |                  0
+ Parbhani                   |                1 |                  0
+ Kalisz                     |                1 |                  0
+ Ourense (Orense)           |                1 |                  0
+ Ezeiza                     |                1 |                  0
+ Basel                      |                1 |                  0
+ Ede                        |                1 |                  0
+ Lausanne                   |                1 |                  0
+ Hsichuh                    |                1 |                  0
+ Bhilwara                   |                1 |                  0
+ Ashdod                     |                1 |                  0
+ Davao                      |                1 |                  0
+ Purnea (Purnia)            |                1 |                  0
+ Joliet                     |                1 |                  0
+ Hiroshima                  |                1 |                  0
+ Benguela                   |                1 |                  0
+ Bratislava                 |                1 |                  0
+ Mannheim                   |                1 |                  0
+ Oulu                       |                1 |                  0
+ Sal                        |                1 |                  0
+ Smolensk                   |                1 |                  0
+ Merlo                      |                1 |                  0
+ Usolje-Sibirskoje          |                1 |                  0
+ Dhule (Dhulia)             |                1 |                  0
+ Tongliao                   |                1 |                  0
+ Atinsk                     |                1 |                  0
+ Fengshan                   |                1 |                  0
+ Zhezqazghan                |                1 |                  0
+ Shenzhen                   |                1 |                  0
+ Tanshui                    |                1 |                  0
+ Pachuca de Soto            |                1 |                  0
+ Kuwana                     |                1 |                  0
+ Tandil                     |                1 |                  0
+ Satna                      |                1 |                  0
+ London                     |                2 |                  0
+ Faaa                       |                1 |                  0
+ Stara Zagora               |                1 |                  0
+ Korla                      |                1 |                  0
+ La Romana                  |                1 |                  0
+ Southampton                |                1 |                  0
+ Shaoguan                   |                1 |                  0
+ Ciomas                     |                1 |                  0
+ Luzinia                    |                1 |                  0
+ Kurashiki                  |                1 |                  0
+ Monywa                     |                1 |                  0
+ Sokoto                     |                1 |                  0
+ Compton                    |                1 |                  0
+ Haiphong                   |                1 |                  0
+ Namibe                     |                1 |                  0
+ Sasebo                     |                1 |                  0
+ Callao                     |                1 |                  0
+ Shubra al-Khayma           |                1 |                  0
+ Niznekamsk                 |                1 |                  0
+ Ogbomosho                  |                1 |                  0
+ Yingkou                    |                1 |                  0
+ Augusta-Richmond County    |                1 |                  0
+ Baicheng                   |                1 |                  0
+ Hodeida                    |                1 |                  0
+ Saarbrcken                 |                1 |                  0
+ Isesaki                    |                1 |                  0
+ Yerevan                    |                1 |                  0
+ Vitria de Santo Anto       |                1 |                  0
+ Arecibo                    |                1 |                  0
+ Bandar Seri Begawan        |                1 |                  0
+ Madiun                     |                1 |                  0
+ Miraj                      |                1 |                  0
+ Konotop                    |                1 |                  0
+ Juazeiro do Norte          |                1 |                  0
+ Kanazawa                   |                1 |                  0
+ Qomsheh                    |                1 |                  0
+ Datong                     |                1 |                  0
+ Nagaon                     |                1 |                  0
+ Saint-Denis                |                1 |                  0
+ Zanzibar                   |                1 |                  0
+ al-Ayn                     |                1 |                  0
+ Simferopol                 |                1 |                  0
+ Laohekou                   |                1 |                  0
+ Ponce                      |                1 |                  0
+ Rae Bareli                 |                1 |                  0
+ El Fuerte                  |                1 |                  0
+ Jamalpur                   |                1 |                  0
+ Lungtan                    |                1 |                  0
+ Pemalang                   |                1 |                  0
+ Shimonoseki                |                1 |                  0
+ Kamakura                   |                1 |                  0
+ Meixian                    |                1 |                  0
+ Arlington                  |                1 |                  0
+ Qinhuangdao                |                1 |                  0
+ Tychy                      |                1 |                  0
+ Katihar                    |                1 |                  0
+ Grand Prairie              |                1 |                  0
+ Omiya                      |                1 |                  0
+ Ibirit                     |                1 |                  0
+ Cuautla                    |                1 |                  0
+ Amersfoort                 |                1 |                  0
+ Kirovo-Tepetsk             |                1 |                  0
+ Rockford                   |                1 |                  0
+ So Leopoldo                |                1 |                  0
+ Osmaniye                   |                1 |                  0
+ Naala-Porto                |                1 |                  0
+ Chungho                    |                1 |                  0
+ Ueda                       |                1 |                  0
+ Lublin                     |                1 |                  0
+ Otsu                       |                1 |                  0
+ Rajkot                     |                1 |                  0
+ Rio Claro                  |                1 |                  0
+ Newcastle                  |                1 |                  0
+ Roanoke                    |                1 |                  0
+ Sanya                      |                1 |                  0
+ Soshanguve                 |                1 |                  0
+ Leshan                     |                1 |                  0
+ Firozabad                  |                1 |                  0
+ Brest                      |                1 |                  0
+ Mukateve                   |                1 |                  0
+ Torren                     |                1 |                  0
+ Ruse                       |                1 |                  0
+ Gaziantep                  |                1 |                  0
+ Rustenburg                 |                1 |                  0
+ Jastrzebie-Zdrj            |                1 |                  0
+ Karnal                     |                1 |                  0
+ Halisahar                  |                1 |                  0
+ Dallas                     |                1 |                  0
+ South Hill                 |                1 |                  0
+ Sharja                     |                1 |                  0
+ San Miguel de Tucumn       |                1 |                  0
+ Sivas                      |                1 |                  0
+ Iwakuni                    |                1 |                  0
+ Stockport                  |                1 |                  0
+ Siliguri (Shiliguri)       |                1 |                  0
+ Dundee                     |                1 |                  0
+ Loja                       |                1 |                  0
+ Bhavnagar                  |                1 |                  0
+ Carmen                     |                1 |                  0
+ Sumqayit                   |                1 |                  0
+ Kragujevac                 |                1 |                  0
+ Jhansi                     |                1 |                  0
+ Citt del Vaticano          |                1 |                  0
+ Bradford                   |                1 |                  0
+ Pyongyang                  |                1 |                  0
+ Guadalajara                |                1 |                  0
+ Santo Andr                 |                1 |                  0
+ Valencia                   |                1 |                  0
+ Jinchang                   |                1 |                  0
+ Maring                     |                1 |                  0
+ Tangail                    |                1 |                  0
+ Halifax                    |                1 |                  0
+ Laiwu                      |                1 |                  0
+ al-Qadarif                 |                1 |                  0
+ Huaian                     |                1 |                  0
+ Iwaki                      |                1 |                  0
+ Baku                       |                1 |                  0
+ Salzburg                   |                1 |                  0
+ Lengshuijiang              |                1 |                  0
+ Birgunj                    |                1 |                  0
+ Baybay                     |                1 |                  0
+ Johannesburg               |                1 |                  0
+ Shanwei                    |                1 |                  0
+ Kabul                      |                1 |                  0
+ Hino                       |                1 |                  0
+ Cavite                     |                1 |                  0
+ Adana                      |                1 |                  0
+ Fontana                    |                1 |                  0
+ Santa Brbara dOeste        |                1 |                  0
+ Papeete                    |                1 |                  0
+ Teboksary                  |                1 |                  0
+ Rampur                     |                1 |                  0
+ Mwanza                     |                1 |                  0
+ Tsaotun                    |                1 |                  0
+ Gatineau                   |                1 |                  0
+ Valle de la Pascua         |                1 |                  0
+ Le Mans                    |                1 |                  0
+ Malm                       |                1 |                  0
+ Nantou                     |                1 |                  0
+ Liepaja                    |                1 |                  0
+ Cayenne                    |                1 |                  0
+ Pavlodar                   |                1 |                  0
+ Shikarpur                  |                1 |                  0
+ Salala                     |                1 |                  0
+ Tieli                      |                1 |                  0
+ Salamanca                  |                1 |                  0
+ Jalib al-Shuyukh           |                1 |                  0
+ Brindisi                   |                1 |                  0
+ Braslia                    |                1 |                  0
+ Ocumare del Tuy            |                1 |                  0
+ Kaduna                     |                1 |                  0
+ Moscow                     |                1 |                  0
+ Arak                       |                1 |                  0
+ Shahr-e Kord               |                1 |                  0
+ Mardan                     |                1 |                  0
+ Kakamigahara               |                1 |                  0
+ al-Manama                  |                1 |                  0
+ Xinxiang                   |                1 |                  0
+ Changzhou                  |                1 |                  0
+ Springs                    |                1 |                  0
+ El Monte                   |                1 |                  0
+ Czestochowa                |                1 |                  0
+ Pudukkottai                |                1 |                  0
+ Haldia                     |                1 |                  0
+ Hami                       |                1 |                  0
+ Nyeri                      |                1 |                  0
+ Novoterkassk               |                1 |                  0
+ Saint Louis                |                1 |                  0
+ Mogiljov                   |                1 |                  0
+ Ziguinchor                 |                1 |                  0
+ Jodhpur                    |                1 |                  0
+ Mexicali                   |                1 |                  0
+ Yuzhou                     |                1 |                  0
+ Oshawa                     |                1 |                  0
+ Jaffna                     |                1 |                  0
+ Lhokseumawe                |                1 |                  0
+ Aden                       |                1 |                  0
+ Sullana                    |                1 |                  0
+ Kaliningrad                |                1 |                  0
+ Okinawa                    |                1 |                  0
+ Bijapur                    |                1 |                  0
+ Warren                     |                1 |                  0
+ Enshi                      |                1 |                  0
+ Rizhao                     |                1 |                  0
+ Jurez                      |                1 |                  0
+ Almirante Brown            |                1 |                  0
+ Mahajanga                  |                1 |                  0
+ A Corua (La Corua)         |                1 |                  0
+ Bhopal                     |                1 |                  0
+ Celaya                     |                1 |                  0
+ Taguig                     |                1 |                  0
+ Garland                    |                1 |                  0
+ Cuauhtmoc                  |                1 |                  0
+ Higashiosaka               |                1 |                  0
+ Adoni                      |                1 |                  0
+ Yaound                     |                1 |                  0
+ Sanaa                      |                1 |                  0
+ Munger (Monghyr)           |                1 |                  0
+ Berhampore (Baharampur)    |                1 |                  0
+ Nukualofa                  |                1 |                  0
+ Beni-Mellal                |                1 |                  0
+ Kimberley                  |                1 |                  0
+ Sambhal                    |                1 |                  0
+ Binzhou                    |                1 |                  0
+ Donostia-San Sebastin      |                1 |                  0
+ Pangkal Pinang             |                1 |                  0
+ Syrakusa                   |                1 |                  0
+ Esfahan                    |                1 |                  0
+ Cuman                      |                1 |                  0
+ Tabriz                     |                1 |                  0
+ Manchester                 |                1 |                  0
+ Yamuna Nagar               |                1 |                  0
+ Owo                        |                1 |                  0
+ Matamoros                  |                1 |                  0
+ Jedda                      |                1 |                  0
+ San Felipe del Progreso    |                1 |                  0
+ Kansas City                |                1 |                  0
+ Mandaluyong                |                1 |                  0
+ Mit Ghamr                  |                1 |                  0
+ Mwene-Ditu                 |                1 |                  0
+ Chiayi                     |                1 |                  0
+ Battambang                 |                1 |                  0
+ Sultanbeyli                |                1 |                  0
+ Jelets                     |                1 |                  0
+ Pathankot                  |                1 |                  0
+ Chatsworth                 |                1 |                  0
+ Vaduz                      |                1 |                  0
+ Tsuyama                    |                1 |                  0
+ Taizz                      |                1 |                  0
+ Kimchon                    |                1 |                  0
+ La Plata                   |                1 |                  0
+ Yangor                     |                1 |                  0
+ Bellevue                   |                1 |                  0
+ Vila Velha                 |                1 |                  0
+ Coacalco de Berriozbal     |                1 |                  0
+ San Juan Bautista Tuxtepec |                1 |                  0
+ Cabuyao                    |                1 |                  0
+ Hamilton                   |                1 |                  0
+ Sorocaba                   |                1 |                  0
+ Tanza                      |                1 |                  0
+ Jaroslavl                  |                1 |                  0
+ Yuncheng                   |                1 |                  0
+ Bislig                     |                1 |                  0
+ Ciparay                    |                1 |                  0
+ Kursk                      |                1 |                  0
+ Lincoln                    |                1 |                  0
+ Okayama                    |                1 |                  0
+ Dos Quebradas              |                1 |                  0
+ Sincelejo                  |                1 |                  0
+ Miyakonojo                 |                1 |                  0
+ Hidalgo                    |                1 |                  0
+ Nakhon Sawan               |                1 |                  0
+ Pontianak                  |                1 |                  0
+ Bilbays                    |                1 |                  0
+ Anpolis                    |                1 |                  0
+ Valparai                   |                1 |                  0
+ Tianjin                    |                1 |                  0
+ Bern                       |                1 |                  0
+ Syktyvkar                  |                1 |                  0
+ Xiangtan                   |                1 |                  0
+ Bhusawal                   |                1 |                  0
+ Jakarta                    |                1 |                  0
+ Cuernavaca                 |                1 |                  0
+ Halle/Saale                |                1 |                  0
+ Alessandria                |                1 |                  0
+ Huejutla de Reyes          |                1 |                  0
+ Asuncin                    |                1 |                  0
+ Aparecida de Goinia        |                1 |                  0
+ Ljubertsy                  |                1 |                  0
+ Peoria                     |                1 |                  0
+ Yantai                     |                1 |                  0
+ Nador                      |                1 |                  0
+ Songkhla                   |                1 |                  0
+ Tabuk                      |                1 |                  0
+ Weifang                    |                1 |                  0
+ Ivanovo                    |                1 |                  0
+ Blumenau                   |                1 |                  0
+ Memphis                    |                1 |                  0
+ Bchar                      |                1 |                  0
+ Vinh                       |                1 |                  0
+ Tafuna                     |                1 |                  0
+ Baha Blanca                |                1 |                  0
+ Palghat (Palakkad)         |                1 |                  0
+ Idfu                       |                1 |                  0
+ Fuyu                       |                1 |                  0
+ Touliu                     |                1 |                  0
+ Laredo                     |                1 |                  0
+ Huixquilucan               |                1 |                  0
+ Dadu                       |                1 |                  0
+ Kolpino                    |                1 |                  0
+ Eskisehir                  |                1 |                  0
+ Ipoh                       |                1 |                  0
+ Nabereznyje Telny          |                1 |                  0
+ Ashqelon                   |                1 |                  0
+ Imus                       |                1 |                  0
+ Nanyang                    |                1 |                  0
+ Richmond Hill              |                1 |                  0
+ Caracas                    |                1 |                  0
+ Emmen                      |                1 |                  0
+ Zaoyang                    |                1 |                  0
+ Santiago de los Caballeros |                1 |                  0
+ Tel Aviv-Jaffa             |                1 |                  0
+ Sterling Heights           |                1 |                  0
+ Kermanshah                 |                1 |                  0
+ Santiago de Compostela     |                1 |                  0
+ al-Qatif                   |                1 |                  0
+ Hohhot                     |                1 |                  0
+ Bayugan                    |                1 |                  0
+ Clarksville                |                1 |                  0
+ Maracabo                   |                1 |                  0
+ Vijayawada                 |                1 |                  0
+ ostka                      |                1 |                  0
+ Nuuk                       |                1 |                  0
+ Sousse                     |                1 |                  0
+ Toulouse                   |                1 |                  0
+ Nezahualcyotl              |                1 |                  0
+ Emeishan                   |                1 |                  0
+ Poos de Caldas             |                1 |                  0
+ Lipetsk                    |                1 |                  0
+ Cam Ranh                   |                1 |                  0
+ Goinia                     |                1 |                  0
+ Dzerzinsk                  |                1 |                  0
+ Dayton                     |                1 |                  0
+ Juiz de Fora               |                1 |                  0
+ Daugavpils                 |                1 |                  0
+ Qalyub                     |                1 |                  0
+ Hoshiarpur                 |                1 |                  0
+ Paarl                      |                1 |                  0
+ Gulbarga                   |                1 |                  0
+ Ranchi                     |                1 |                  0
+ Angra dos Reis             |                1 |                  0
+ Deba Habe                  |                1 |                  0
+ Ciudad del Este            |                1 |                  0
+ Brockton                   |                1 |                  0
+ Ikerre                     |                1 |                  0
+ Vilnius                    |                1 |                  0
+ Robamba                    |                1 |                  0
+ Balaiha                    |                1 |                  0
+ Hubli-Dharwad              |                1 |                  0
+ Xintai                     |                1 |                  0
+ Tartu                      |                1 |                  0
+ Tiefa                      |                1 |                  0
+ Sawhaj                     |                1 |                  0
+ San Bernardino             |                1 |                  0
+ Beira                      |                1 |                  0
+ Tallahassee                |                1 |                  0
+ Barcelona                  |                1 |                  0
+ Gorontalo                  |                1 |                  0
+ Duisburg                   |                1 |                  0
+ Botshabelo                 |                1 |                  0
+ Siegen                     |                1 |                  0
+ Klerksdorp                 |                1 |                  0
+ Udaipur                    |                1 |                  0
+ Balurghat                  |                1 |                  0
+ Pak Kret                   |                1 |                  0
+ Kitwe                      |                1 |                  0
+ Bergamo                    |                1 |                  0
+ guas Lindas de Gois        |                1 |                  0
+ Mysore                     |                1 |                  0
+ Tonghae                    |                1 |                  0
+ Korolev                    |                1 |                  0
+ Quilmes                    |                1 |                  0
+ Phnom Penh                 |                1 |                  0
+(597 rows)
+
+macbookpro@MacBook-Pro-Valentin pagila % psql -U postgres -d pagila -f pagila-queries/only7.sql
+    city_type    | category_name |      total_hours       
+-----------------+---------------+------------------------
+ starts_with_a   | Games         | 21156.7333333333333334
+ starts_with_a   | New           | 21719.4333333333333336
+ starts_with_a   | Animation     | 19514.7833333333333327
+ starts_with_a   | Children      | 25834.1999999999999999
+ starts_with_a   | Music         | 20136.9666666666666665
+ starts_with_a   | Comedy        | 16810.7666666666666661
+ starts_with_a   | Family        | 20108.9333333333333333
+ starts_with_a   | Classics      | 20746.4500000000000001
+ starts_with_a   | Documentary   | 22296.0166666666666674
+ starts_with_a   | Horror        | 20723.5666666666666666
+ starts_with_a   | Foreign       | 22755.0833333333333331
+ starts_with_a   | Sports        | 19021.5999999999999994
+ starts_with_a   | Sci-Fi        | 20992.9833333333333330
+ starts_with_a   | Drama         | 19570.6166666666666665
+ starts_with_a   | Action        | 19159.6333333333333335
+ starts_with_a   | Travel        | 20961.8166666666666672
+ contains_hyphen | Games         | 13887.8833333333333331
+ contains_hyphen | New           | 10916.1666666666666667
+ contains_hyphen | Animation     | 10828.1999999999999997
+ contains_hyphen | Children      |  9691.8999999999999998
+ contains_hyphen | Music         | 13967.9833333333333331
+ contains_hyphen | Comedy        |  9840.8166666666666661
+ contains_hyphen | Family        | 12297.9833333333333329
+ contains_hyphen | Classics      | 10610.9833333333333335
+ contains_hyphen | Documentary   | 11418.3000000000000000
+ contains_hyphen | Horror        | 11707.3000000000000001
+ contains_hyphen | Foreign       | 13430.9499999999999994
+ contains_hyphen | Sports        | 11717.4999999999999996
+ contains_hyphen | Sci-Fi        | 14251.1666666666666661
+ contains_hyphen | Drama         | 14556.0333333333333333
+ contains_hyphen | Action        | 11270.9166666666666664
+ contains_hyphen | Travel        | 12385.1833333333333330
+(32 rows)

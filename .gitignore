@@ -21,6 +21,8 @@ ENV/
 # Logs and databases
 *.log
 *.sqlite3
+*.sql.bak  # Добавлено: резервные копии SQL-файлов
+*.dump     # Добавлено: дампы базы данных PostgreSQL
 
 # Test outputs
 htmlcov/
@@ -33,3 +35,11 @@ htmlcov/
 *.egg-info/
 dist/
 build/
+
+# SQL and PostgreSQL temporary files  
+
+# Task3: Pagila database and temporary files
+!task3/pagila/pagila_queries        # Pagila directory or submodule
+!task3/results.txt    # Temporary results file
+task3/*.sql          # All SQL files in task3, except pagila_queries.sql
+task3/*.psql         # Temporary psql files   

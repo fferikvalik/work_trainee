@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
+
+# Mac
+.DS_Store
+
+# Logs and databases
+*.log
+*.sqlite3
+*.sql.bak  # Добавлено: резервные копии SQL-файлов
+*.dump     # Добавлено: дампы базы данных PostgreSQL
+
+# Test outputs
+htmlcov/
+.coverage
+
+# JetBrains
+.idea/
+
+# Other
+*.egg-info/
+dist/
+build/
+
+# SQL and PostgreSQL temporary files  
+
+# Task3: Pagila database and temporary files
+!task3/pagila/pagila_queries        # Pagila directory or submodule
+!task3/results.txt    # Temporary results file
+task3/*.sql          # All SQL files in task3, except pagila_queries.sql
+task3/*.psql         # Temporary psql files   

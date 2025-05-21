@@ -1,75 +1,81 @@
-# etl/loader.py
-
+# task1/etl/loader.py
 import json
-import csv
+import logging
 from typing import List, Dict
+from db.postgres import PostgresDB
+from .inserter import SchemaCreator
+
+# Настройка логирования
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+class ParserFactory:
+    """Фабрика парсеров для различных форматов."""
+    @staticmethod
+    def get_parser(file_path: str):
+        """Возвращает парсер в зависимости от расширения файла."""
+        if file_path.endswith('.json'):
+            return JSONParser()
+        raise ValueError(f"Неизвестный формат файла: {file_path}")
+
+class JSONParser:
+    """Парсер для JSON-файлов."""
+    def parse(self, file_path: str) -> List[Dict]:
+        """Парсит JSON-файл и возвращает список словарей."""
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except FileNotFoundError as e:
+            logger.error(f"Ошибка чтения файла: {e}")
+            raise
+        except json.JSONDecodeError as e:
+            logger.error(f"Ошибка декодирования JSON: {e}")
+            raise
 
 class DataLoader:
-    @staticmethod
-    def parse_rooms(path: str) -> List[Dict]:
-        """Поддерживает JSON и CSV форматы для файлов комнат."""
-        if path.endswith('.json'):
-            with open(path, encoding='utf-8') as f:
-                content = f.read()
-                if not content.strip():
-                    raise ValueError(f"Файл {path} пустой")
-                return json.loads(content)
-        elif path.endswith('.csv'):
-            rooms = []
-            with open(path, encoding='utf-8') as f:
-                reader = csv.DictReader(f)
-                for row in reader:
-                    rooms.append({
-                        'id': int(row['id']),
-                        'name': row['name']
-                    })
-            return rooms
-        else:
-            raise ValueError(f"Unsupported file format for rooms: {path}")
+    """Класс для загрузки данных в базу данных."""
+    def __init__(self, db: PostgresDB, schema_creator: SchemaCreator):
+        self.db = db
+        self.schema_creator = schema_creator
 
-    @staticmethod
-    def parse_students(path: str) -> List[Dict]:
-        """Поддерживает JSON и CSV форматы для файлов студентов."""
-        if path.endswith('.json'):
-            with open(path, encoding='utf-8') as f:
-                content = f.read()
-                if not content.strip():
-                    raise ValueError(f"Файл {path} пустой")
-                return json.loads(content)
-        elif path.endswith('.csv'):
-            students = []
-            with open(path, encoding='utf-8') as f:
-                reader = csv.DictReader(f)
-                for row in reader:
-                    students.append({
-                        'id': int(row['id']),
-                        'name': row['name'],
-                        'birth_date': row['birth_date'],
-                        'gender': row['gender'],
-                        'room_id': int(row['room_id'])
-                    })
-            return students
-        else:
-            raise ValueError(f"Unsupported file format for students: {path}")
+    def parse_rooms(self, rooms_path: str) -> List[Dict]:
+        """Парсит данные комнат из файла."""
+        parser = ParserFactory.get_parser(rooms_path)
+        return parser.parse(rooms_path)
 
-    def load(self, rooms_path: str, students_path: str, db):
-        # Сначала создаём схему
-        from etl.inserter import SchemaCreator
-        SchemaCreator(db).create_tables()
+    def parse_students(self, students_path: str) -> List[Dict]:
+        """Парсит данные студентов из файла."""
+        parser = ParserFactory.get_parser(students_path)
+        return parser.parse(students_path)
 
-        # Вставляем комнаты
+    def load(self, rooms_path: str, students_path: str):
+        """Загружает данные в базу данных."""
+        logger.info("Начало загрузки данных")
+        self.schema_creator.create_tables()
+
+        # Парсинг и загрузка комнат
         rooms = self.parse_rooms(rooms_path)
-        for room in rooms:
-            db.execute(
-                "INSERT INTO rooms (id, name) VALUES (%s, %s) ON CONFLICT (id) DO NOTHING;",
-                (room['id'], room['name'])
-            )
+        logger.info(f"Загружено {len(rooms)} комнат из {rooms_path}")
+        room_values = [(room["id"], room["name"]) for room in rooms]
+        self.db.execute(
+            "INSERT INTO rooms (id, name) VALUES (%s, %s) ON CONFLICT (id) DO NOTHING",
+            params=room_values,
+            fetch=False
+        )
+        logger.info(f"Вставлено {len(rooms)} комнат в базу данных")
 
-        # Вставляем студентов
+        # Парсинг и загрузка студентов
         students = self.parse_students(students_path)
-        for stu in students:
-            db.execute(
-                "INSERT INTO students (id, name, birth_date, gender, room_id) "
-                "VALUES (%s, %s, %s, %s, %s) ON CONFLICT (id) DO NOTHING;",
-                (stu['id'], stu['name'], stu['birth_date'], stu['gender'], stu['room_id'])
-            )
+        logger.info(f"Загружено {len(students)} студентов из {students_path}")
+        student_values = [
+            (stu["id"], stu["name"], stu["birth_date"], stu["gender"], stu["room_id"])
+            for stu in students
+        ]
+        self.db.execute(
+            "INSERT INTO students (id, name, birth_date, gender, room_id) VALUES (%s, %s, %s, %s, %s) ON CONFLICT (id) DO NOTHING",
+            params=student_values,
+            fetch=False
+        )
+        logger.info(f"Вставлено {len(students)} студентов в базу данных")
+
+        self.db.create_indexes()

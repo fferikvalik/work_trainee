@@ -1,0 +1,7 @@
+[
+    {"id": 1, "name": "Student1", "birth_date": "2000-01-01", "gender": "M", "room_id": 1},
+    {"id": 2, "name": "Student2", "birth_date": "2001-01-01", "gender": "F", "room_id": 1},
+    {"id": 3, "name": "Student3", "birth_date": "1999-06-15", "gender": "M", "room_id": 2},
+    {"id": 4, "name": "Student4", "birth_date": "2002-03-20", "gender": "F", "room_id": 2},
+    {"id": 5, "name": "Student5", "birth_date": "2000-11-11", "gender": "M", "room_id": 3}
+]
